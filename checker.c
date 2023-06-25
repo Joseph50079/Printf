@@ -15,18 +15,18 @@ int checker(va_list ap, const char *format)
 
 	for (x = 0; format[x] != '\0'; x++)
 	{
-	if (format[x] == '%')
-	{
-		z = format_specifiers(format, ap, &x);
-		if (z == -1)
+		if (format[x] == '%')
 		{
-		return (-1);
+			z = format_specifiers(format, ap, &x);
+			if (z == -1)
+			{
+			return (-1);
+			}
+			y = y + z;
+			continue;
 		}
-		y = y + z;
-		continue;
-	}
-	putchar(format[x]);
-	y += 1;
+		putchar(format[x]);
+		y += 1;
 	}
 
 	return (y);
