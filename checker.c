@@ -4,7 +4,7 @@
  * checker - checks for valud format specifiers
  * @ap: argument variable
  * @format: string format
- * Retuen: number of int counted for format
+ * Return: number of int counted for format
  */
 
 
