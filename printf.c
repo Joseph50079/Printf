@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
  */
 int printInteger(int num)
 {
-	char digit[50];
+	char digits[50];
 	int index = 0, length = 0;
 
 	if (num < 0)

@@ -37,3 +37,5 @@ char symbol;
 int (*func)(va_list);
 } spec;
 
+
+#endif
