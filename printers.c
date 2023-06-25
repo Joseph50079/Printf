@@ -33,7 +33,7 @@ int for_string(va_list ap)
 	}
 	else
 	{
-		length = puts_string("(nil)");
+		length = puts_string("(null)");
 	}
 	return (length);
 }
