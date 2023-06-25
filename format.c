@@ -5,7 +5,7 @@
  * @format: string format
  * @ap: argument variable
  * @i: index of format string where '%' is identified in the string 'format'
- *Return: return length of value -1 if fail 2 if '%%' 1 if no valid identifier
+ * Return: return length of value -1 if fail 2 if '%%' 1 if no valid identifier
  */
 
 int format_specifiers(const char *format, va_list ap, int *i)
