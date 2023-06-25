@@ -79,13 +79,11 @@ int for_int_d(va_list ap)
  */
 int for_int_i(va_list ap)
 {
-	int i;
-	char *str;
+	int i, x;
 
 	i = va_arg(ap, int);
-	str = converter(i, 10);
 
-	i = puts_string((str != NULL) ? str : "(nil)");
+	x = printInteger(i);
 
-	return (i);
+	return (x);
 }
