@@ -63,13 +63,15 @@ int puts_string(char *str)
 int for_int_d(va_list ap)
 {
 	signed int d;
-	int length;
+	char *str;
 
 	d = va_arg(ap, signed int);
 
-	length = printInteger(d);
+	str  = converter(d, 10);
 
-	return (length);
+	d = puts_string((str != NULL) ? str : "(null)");
+
+	return (d);
 }
 /**
  * for_int_i - for i
@@ -79,11 +81,13 @@ int for_int_d(va_list ap)
 int for_int_i(va_list ap)
 {
 	int i;
-	int x;
+	char *x;
 
 	i = va_arg(ap, int);
 
-	x = printInteger(i);
+	x = converter(i, 10);
 
-	return (x);
+	i = puts_string((x != NULL) ? x : "(null)");
+
+	return (i);
 }
