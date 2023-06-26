@@ -55,11 +55,7 @@ int puts_string(char *str)
 	return (i);
 }
 
-/**
- * for_int_d - for d
- * @ap: va_list
- * Return: returns length
- */
+
 int for_int_d(va_list ap)
 {
 	signed int d;
@@ -71,7 +67,6 @@ int for_int_d(va_list ap)
 
 	return (length);
 }
-
 /**
  * for_int_i - for i
  * @ap: va_list
@@ -79,10 +74,11 @@ int for_int_d(va_list ap)
  */
 int for_int_i(va_list ap)
 {
-	int i, x;
+	int i;
+	int x;
 
 	i = va_arg(ap, int);
-
+	
 	x = printInteger(i);
 
 	return (x);
