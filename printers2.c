@@ -7,14 +7,15 @@
  */
 int for_int_binary(va_list ap)
 {
-	int x;
+	unsigned int x;
+	int y = 0;
 	char *str;
 
 	x = va_arg(ap, int);
 
 	str = converter(x, 2);
 
-	x = puts_string((str != NULL) ? str : "(null)");
+	y = puts_string((str != NULL) ? str : "(null)");
 
-	return (x);
+	return (y);
 }
