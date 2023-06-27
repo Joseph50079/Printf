@@ -60,3 +60,22 @@ void reverse(char *s)
 		s[fcounter] = rev;
 	}
 }
+
+/**
+ * check_lower - checks lower
+ * @ptr: string
+ * Return: char *
+ */
+char *check_lower(char *ptr)
+{
+	int x;
+
+	for (x = 0; ptr[x]; x++)
+	{
+		if (ptr[x] >= 'a' && ptr[x] <= 'z')
+		{
+			ptr[x] = ptr[x] - 32;
+		}
+	}
+	return (ptr);
+}

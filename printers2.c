@@ -100,24 +100,3 @@ int for_hex_upper(va_list ap)
 	x = puts_string((str != NULL) ? str : "(null)");
 	return (x);
 }
-
-/**
- * check_lower - check for lower case
- * @ptr: string ptr
- * Return: upper case value
- */
-
-char *check_lower(char *ptr)
-{
-	int x;
-
-	for (x = 0; ptr[x]; i++)
-	{
-			if (ptr[x] >= 'a' && ptr[x] <= 'z')
-			{
-				ptr[x] = ptr[x] - 32;
-			}
-	}
-
-	return (ptr);
-}
