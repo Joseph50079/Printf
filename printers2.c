@@ -22,17 +22,58 @@ int for_int_binary(va_list ap)
 
 
 /**
- * for_int_hex - function print's in hexadecimal
- * @ap: argumment variable
+ * for_octal - for octal
+ * @ap: va_list
  * Return: length
  */
-
-int for_int_hex(va_list ap)
+int for_octal(va_list ap)
 {
-	unsigned int x;
-	int i;
+	int x;
+	unsigned int y;
 	char *str;
 
-	x = va_arg(ap, int);
+	y = va_arg(ap, unsigned int);
 
-	str = converter(x, 16);
+	str = converter(y, 8);
+
+	x = puts_string((str != NULL) ? str : "(null)");
+
+	return (x);
+}
+
+/**
+ * for_unsigned - for unsigned
+ * @ap: a va_list
+ * Return: length
+ */
+int for_unsigned(va_list ap)
+{
+	int x;
+	unsigned int y;
+	char *str;
+
+	y = va_arg(ap, unsigned int);
+	str = converter(y, 10);
+
+	x = puts_string((str != NULL) ? str : "(null)");
+	return (x);
+}
+
+/**
+ * for_hex_lower - for hex lower
+ * @ap: a va_list
+ * Return: length
+ */
+int for_hex_lower(va_list ap)
+{
+	int x;
+	unsigned int y;
+	char *str;
+
+	y = va_arg(ap, unsigned int);
+
+	str = converter(y, 16);
+
+	x = puts_string((str != NULL) ? str : "(null)");
+	return (x);
+}

@@ -20,9 +20,13 @@ int for_string(va_list ap);
 int for_int_d(va_list ap);
 int for_int_i(va_list ap);
 int for_int_binary(va_list ap);
+int for_octal(va_list ap);
+int for_unsigned(va_list ap);
+int for_hex_lower(va_list ap);
+
 
 /* tools */
-char *converter(int, int);
+char *converter(long int, int);
 void reverse(char *s);
 int printInteger(int num);
 /* struct prototype */
