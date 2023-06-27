@@ -35,9 +35,7 @@ int format_specifiers(const char *format, va_list ap, int *i)
 		return (1);
 	}
 	if (format[*i] == '\0')
-	{
 		return (-1);
-	}
 
 	for (x = 0; x < 8; x++)
 	{
@@ -49,6 +47,5 @@ int format_specifiers(const char *format, va_list ap, int *i)
 	}
 	putchar('%');
 	putchar(format[*i]);
-
 	return (2);
 }
