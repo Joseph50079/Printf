@@ -19,3 +19,20 @@ int for_int_binary(va_list ap)
 
 	return (y);
 }
+
+
+/**
+ * for_int_hex - function print's in hexadecimal
+ * @ap: argumment variable
+ * Return: length
+ */
+
+int for_int_hex(va_list ap)
+{
+	unsigned int x;
+	int i;
+	char *str;
+
+	x = va_arg(ap, int);
+
+	str = converter(x, 16);

@@ -69,7 +69,7 @@ int for_int_d(va_list ap)
 
 	x = converter(d, 10);
 
-	d = puts_string((x != NULL) ? x : "(null)");
+	d = puts_string((x != NULL) ? x : "127");
 
 	return (d);
 }
