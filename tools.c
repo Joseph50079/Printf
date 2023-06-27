@@ -4,6 +4,7 @@
  * converter - a conveter
  * @x: ...
  * @n: ...
+ * Return: char *
  */
 char *converter(int x, int n)
 {

@@ -19,6 +19,7 @@ int for_char(va_list ap);
 int for_string(va_list ap);
 int for_int_d(va_list ap);
 int for_int_i(va_list ap);
+int for_int_binary(va_list ap);
 
 /* tools */
 char *converter(int, int);
