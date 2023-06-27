@@ -77,26 +77,3 @@ int for_hex_lower(va_list ap)
 	x = puts_string((str != NULL) ? str : "(null)");
 	return (x);
 }
-
-/**
- * for_hex_upper - for hexdecimal upper case
- * @ap: argument list variable
- * Return: return length
- */
-
-int for_hex_upper(va_list ap)
-{
-	int x;
-	unsigned int y;
-	char *str;
-
-	y = va_arg(ap, unsigned int);
-
-	str = converter(y, 16);
-
-	str = check_lower(str);
-
-
-	x = puts_string((str != NULL) ? str : "(null)");
-	return (x);
-}
