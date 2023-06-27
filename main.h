@@ -23,7 +23,8 @@ int for_int_binary(va_list ap);
 int for_octal(va_list ap);
 int for_unsigned(va_list ap);
 int for_hex_lower(va_list ap);
-
+int for_hex_upper(va_list ap);
+int for_octal(va_list ap);
 
 /* tools */
 char *converter(long int, int);
