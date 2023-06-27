@@ -41,7 +41,8 @@ int _printf(const char *format, ...)
 int printInteger(int num)
 {
 	char digits[50];
-	int index = 0, length = 0;
+	int index = 0;
+	int length = 0;
 
 	if (num < 0)
 	{
@@ -53,13 +54,15 @@ int printInteger(int num)
 	if (num == 0)
 	{
 		putchar('0');
-		return (1);
+		length = 1;
+		return (length);
 	}
 
 	while (num != 0)
 	{
-		digits[index] = '0' + num % 10;
-		num = num / 10;
+		digits[index] = '0' + (num % 10);
+		num /= 10;
+		index++;
 	}
 
 	while (index--)

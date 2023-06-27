@@ -7,47 +7,31 @@
  */
 char *converter(int x, int n)
 {
-	char *str = NULL;
-	int z = 0, y, i;
-	int negative = 0;
+	static char *ptr = "0123456789abcdef";
+	static char arr[50];
+	char *str;
+	char sym = 0;
+	unsigned int car = x;
 
-	if (x == 0)
+	if (x < 0)
 	{
-		str = malloc(sizeof(char) * 2);
-		str[z++] = '0';
-		str[z] = '\0';
-		return (str);
-	}
-	if (x < 0 && n == 10)
-	{
-		negative = 1;
 		x = -x;
+		sym = '-';
 	}
 
-	i = x;
-	while (i != 0)
-	{
-		i /= n;
-		z++;
-	}
+	str = &arr[49];
+	*str = '\0';
 
-	str = malloc(sizeof(char) * (z + negative + 1));
-
-	z = 0;
 	while (x != 0)
 	{
-		y = x % n;
-		str[z++] = (y > 9) ? (y - 10) + 'a' : (y + '0');
+		*--str = ptr[car % n];
 		x /= n;
 	}
-	if (negative == 1 && n == 10)
+
+	if (sym == '-')
 	{
-		str[z++] = '-';
+		*--str = sym;
 	}
-
-	str[z] = '\0';
-
-	reverse(str);
 
 	return (str);
 }
