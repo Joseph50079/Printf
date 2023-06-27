@@ -62,10 +62,10 @@ int puts_string(char *str)
  */
 int for_int_d(va_list ap)
 {
-	signed int d;
+	int d;
 	char *x;
 
-	d = va_arg(ap, signed int);
+	d = va_arg(ap, int);
 
 	x = converter(d, 10);
 
