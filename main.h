@@ -27,6 +27,7 @@ int for_hex_upper(va_list ap);
 
 
 /* tools */
+char *check_lower(char *ptr);
 char *converter(long int, int);
 void reverse(char *s);
 int printInteger(int num);
