@@ -18,6 +18,9 @@ int format_specifiers(const char *format, va_list ap, int *i)
 	{'d', for_int_d},
 	{'i', for_int_i},
 	{'b', for_int_binary},
+	{'o', for_octal},
+	{'u', for_unsigned},
+	{'x', for_hex_lower},
 	{'\0', NULL},
 	};
 
@@ -33,7 +36,7 @@ int format_specifiers(const char *format, va_list ap, int *i)
 		return (-1);
 	}
 
-	for (x = 0; x < 5; x++)
+	for (x = 0; x < 8; x++)
 	{
 		if (format[*i] == specific[x].symbol)
 		{

@@ -6,7 +6,7 @@
  * @n: ...
  * Return: char *
  */
-char *converter(int x, int n)
+char *converter(long int x, int n)
 {
 	static char *ptr = "0123456789abcdef";
 	static char arr[50];
@@ -36,6 +36,7 @@ char *converter(int x, int n)
 
 	return (str);
 }
+
 
 
 /**
