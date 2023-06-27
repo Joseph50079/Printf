@@ -63,13 +63,15 @@ int puts_string(char *str)
 int for_int_d(va_list ap)
 {
 	signed int d;
-	int x;
+	char *x;
 
 	d = va_arg(ap, signed int);
 
-	x = printInteger(d);
+	x = converter(d, 10);
 
-	return (x);
+	d = puts_string((x != NULL) ? x : "(null)");
+
+	return (d);
 }
 /**
  * for_int_i - for i

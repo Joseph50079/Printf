@@ -15,17 +15,17 @@ char *converter(int x, int n)
 
 	if (x < 0)
 	{
-		x = -x;
+		car = -x;
 		sym = '-';
 	}
 
 	str = &arr[49];
 	*str = '\0';
 
-	while (x != 0)
+	while (car != 0)
 	{
 		*--str = ptr[car % n];
-		x /= n;
+		car /= n;
 	}
 
 	if (sym == '-')
