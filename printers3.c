@@ -33,7 +33,7 @@ char *check_lower(char *ptr)
 {
 	int x;
 
-	for (x = 0; ptr[x]; i++)
+	for (x = 0; ptr[x]; x++)
 	{
 		if (ptr[x] >= 'a' && ptr[x] <= 'z')
 		{
