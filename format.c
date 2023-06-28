@@ -13,17 +13,13 @@ int format_specifiers(const char *format, va_list ap, int *i)
 	int x, length = 0;
 
 	spec specific[] = {
-	{'c', for_char},
-	{'s', for_string},
-	{'d', for_int_d},
-	{'i', for_int_i},
-	{'b', for_int_binary},
-	{'o', for_octal},
-	{'x', for_hex_lower},
-	{'X', for_hex_upper},
-	{'u', for_unsigned},
-	{'\0', NULL},
-	};
+		{'c', for_char},{'s', for_string},
+		{'d', for_int_d},{'i', for_int_i},
+		{'b', for_int_binary},{'o', for_octal},
+		{'x', for_hex_lower},{'X', for_hex_upper},
+		{'u', for_unsigned},{'p', for_pointer},
+		{'\0', NULL},
+		};
 
 	++*i;
 
