@@ -12,8 +12,13 @@ int main(void)
 	int len2;
 	char *str;
 	void *addr;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ddfe5d6c7db20089c29246c1e51a33900020232
 	unsigned int ui;
+
+	addr = (void *)0x7ffe637541f0;
 
 	_printf("%b %b\n", 98, 29);
 
@@ -41,6 +46,9 @@ int main(void)
 
 	_printf("Unsigned:[%u]\n", ui);
 	printf("Unsigned:[%u]\n", ui);
+
+	_printf("Address:[%p]\n", addr);
+	printf("Address:[%p]\n", addr);
 
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);

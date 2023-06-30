@@ -23,6 +23,12 @@ char *converter(long int x, int n)
 	str = &arr[49];
 	*str = '\0';
 
+	if (x == 0)
+	{
+		*--str = '0';
+		*--str = '0';
+	}
+
 	while (car != 0)
 	{
 		*--str = ptr[car % n];
