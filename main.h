@@ -24,7 +24,7 @@ int for_octal(va_list ap);
 int for_unsigned(va_list ap);
 int for_hex_lower(va_list ap);
 int for_hex_upper(va_list ap);
-
+int for_pointer(va_list ap);
 
 /* tools */
 char *check_lower(char *ptr);
