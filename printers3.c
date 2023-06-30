@@ -45,38 +45,10 @@ char *check_lower(char *ptr)
 }
 
 /**
-int for_pointer(va_list ap)
-{
-	unsigned long int y;
-	int x;
-	char *str;
-
-	y = va_arg(ap, unsigned long int);
-
-	str = converter(y, 16);
-
-	if (!strcmp(str, "0"))
-	{
-		x = puts_string("(nil)");
-		return (x);
-	}
-
-	x = puts_string("0x");
-
-	if (!strcmp(str, "-1"))
-	{
-		x += puts_string("ffffffffffffffff");
-	}
-
-	else
-	{
-		x += puts_string(str);
-	}
-
-	return (x);
-}
-*/
-
+ * for_pointer - %p function format specifier
+ * @ap: argument variable
+ * Return: length
+ *
 int for_pointer(va_list ap)
 {
   int x;
@@ -107,3 +79,4 @@ int for_pointer(va_list ap)
 
   return (x);
 }
+*/

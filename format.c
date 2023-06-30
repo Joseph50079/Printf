@@ -24,7 +24,6 @@ int format_specifiers(const char *format, va_list ap, int *i)
 	{'u', for_unsigned},
 	{'p', for_pointer},
 	{'\0', NULL},
-	};
 
 	++*i;
 
