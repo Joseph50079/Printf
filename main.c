@@ -10,18 +10,12 @@ int main(void)
 {
 	int len;
 	int len2;
-	char *str;
 	void *addr;
 	unsigned int ui;
 
 	addr = (void *)0x7ffe637541f0;
-
 	_printf("%b %b\n", 98, 29);
-
 	ui = (unsigned int)INT_MAX + 1024;
-	str = converter(ui, 16);
-	_printf("%s\n", str);
-	printf("%o\n", ui);
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	addr = (void *)0x7ffe637541f0;
@@ -39,13 +33,10 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-
 	_printf("Unsigned:[%u]\n", ui);
 	printf("Unsigned:[%u]\n", ui);
-
 	_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
-
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
